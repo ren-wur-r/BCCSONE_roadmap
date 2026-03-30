@@ -1,0 +1,319 @@
+.page {
+  flex: 1;
+  overflow: auto;
+  background: #fafafa;
+}
+
+.mapArea {
+  flex-shrink: 0;
+  padding: 32px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* ---- Top row: two platforms side by side ---- */
+.topRow {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ---- Connector arrows between top and bottom ---- */
+.connectorRow {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 4px;
+}
+
+/* ---- Platform block ---- */
+.platBlock {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0 8px;
+  align-items: center;
+}
+
+.platSide {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.platSideLeft {
+  composes: platSide;
+  align-items: flex-end;
+}
+
+.platSideRight {
+  composes: platSide;
+  align-items: flex-start;
+}
+
+/* ---- Platform node (center) ---- */
+.platNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.platBubble {
+  border: 2px solid;
+  border-radius: 26px;
+  padding: 10px 24px;
+  background: #fff;
+  text-align: center;
+  cursor: default;
+}
+
+.platName {
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.platMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  justify-content: center;
+}
+
+.platOwner {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.platFeBe {
+  font-size: 9px;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.platFeBeVal {
+  font-weight: 700;
+}
+
+.platFeBeWarn {
+  composes: platFeBeVal;
+  color: #dc2626;
+}
+
+/* ---- Branch pill (clickable) ---- */
+.branchPill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.12s;
+  user-select: none;
+}
+
+.branchPill:hover {
+  filter: brightness(0.95);
+}
+
+.branchPillActive {
+  composes: branchPill;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  font-weight: 700;
+}
+
+.branchPillHighlight {
+  color: #b91c1c;
+}
+
+.branchCount {
+  font-size: 9px;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.branchBadge {
+  font-size: 8px;
+  font-weight: 700;
+  padding: 0 4px;
+  border-radius: 3px;
+  line-height: 1.5;
+}
+
+.badgeShared {
+  composes: branchBadge;
+  color: #5a7a82;
+  background: #e8f0f2;
+}
+
+.badgeKey {
+  composes: branchBadge;
+  color: #c0392b;
+  background: #fce8e6;
+}
+
+/* ---- Detail panel (below map) ---- */
+.detailPanel {
+  border-top: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 20px 32px 28px;
+  overflow: auto;
+  animation: slideUp 0.15s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.detailHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.detailTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.detailPlatName {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.detailClose {
+  margin-left: auto;
+  background: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: 11px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.detailClose:hover {
+  background: #f3f4f6;
+}
+
+/* Stats row */
+.statsRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.statCard {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  padding: 10px 16px;
+  min-width: 100px;
+}
+
+.statLabel {
+  font-size: 10px;
+  color: #9ca3af;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.statValue {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Items list */
+.itemsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.itemChip {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.chipDone {
+  composes: itemChip;
+  background: #dcfce7;
+  color: #166534;
+  font-weight: 600;
+}
+
+.chipInProgress {
+  composes: itemChip;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.chipPlanned {
+  composes: itemChip;
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* Recommendation */
+.recBlock {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #92400e;
+  line-height: 1.6;
+}
+
+.recLabel {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+/* Empty state */
+.emptyDetail {
+  text-align: center;
+  padding: 48px 0;
+  color: #d1d5db;
+  font-size: 13px;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 6px;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}

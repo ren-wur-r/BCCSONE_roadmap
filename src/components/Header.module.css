@@ -1,0 +1,158 @@
+.header {
+  padding: 12px 20px 8px;
+  border-bottom: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.statsGroup {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.statItem {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.statValue {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.statLabel {
+  font-size: 10px;
+  color: var(--color-text-hint);
+}
+
+.pctText {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+.tabGroup {
+  display: flex;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 2px;
+  gap: 1px;
+}
+
+.tab {
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.15s;
+}
+
+.tabActive {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}
+
+.tabInactive {
+  background: transparent;
+  color: var(--color-text-hint);
+}
+
+.toolbar {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.filterSelect {
+  width: auto;
+  font-size: 11px;
+  padding: 3px 8px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  outline: none;
+}
+
+.searchInput {
+  width: auto;
+  flex: 0 1 130px;
+  font-size: 11px;
+  padding: 3px 8px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  outline: none;
+}
+
+.searchInput:focus,
+.filterSelect:focus {
+  border-color: var(--color-accent);
+}
+
+.mapHint {
+  font-size: 10px;
+  color: var(--color-text-faint);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbarBtn {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+  padding: 3px 8px;
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.toolbarBtn:hover {
+  background: var(--color-bg-secondary);
+}
+
+.toolbarBtnPrimary {
+  composes: toolbarBtn;
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+  padding: 3px 10px;
+}
+
+.toolbarBtnPrimary:hover {
+  background: #1d4ed8;
+}

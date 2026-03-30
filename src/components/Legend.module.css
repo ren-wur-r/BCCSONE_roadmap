@@ -1,0 +1,36 @@
+.bar {
+  padding: 6px 20px;
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-shrink: 0;
+  background: var(--color-bg-secondary);
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 10px;
+  color: var(--color-text-hint);
+}
+
+.statusTag {
+  font-size: 10px;
+  padding: 1px 8px;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+}
+
+.separator {
+  font-size: 10px;
+  color: var(--color-text-faint);
+}
+
+.connectionLabel {
+  font-size: 10px;
+  color: var(--color-text-hint);
+}
+
+.arrow {
+  color: var(--color-text-faint);
+}

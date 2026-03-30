@@ -1,0 +1,13 @@
+.app {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.loading {
+  padding: 40px;
+  color: var(--color-text-hint);
+}

@@ -1,0 +1,374 @@
+.container {
+  flex: 1;
+  overflow: auto;
+  padding: 20px 24px 40px;
+  background: #f8f9fb;
+}
+
+/* Platform Card */
+.platformCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.platformHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.platformColorBar {
+  width: 4px;
+  height: 36px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.platformTitle {
+  font-size: 16px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.ownerTag {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  background: var(--color-bg-tertiary);
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.progressBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progressBarOuter {
+  width: 80px;
+  height: 6px;
+  background: #f3f4f6;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressBarInner {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.progressText {
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 32px;
+  text-align: right;
+}
+
+.progressDetail {
+  font-size: 11px;
+  color: var(--color-text-hint);
+}
+
+/* Two columns layout */
+.columnsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.column {
+  padding: 14px 20px;
+}
+
+.column + .column {
+  border-left: 1px solid var(--color-border-light);
+}
+
+.columnTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-hint);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Branch block */
+.branchBlock {
+  margin-bottom: 4px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.branchHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.branchDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.branchName {
+  font-size: 13px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.branchTag {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.tagShared {
+  composes: branchTag;
+  color: #5a7a82;
+  background: #e8f0f2;
+}
+
+.tagHighlight {
+  composes: branchTag;
+  color: #c0392b;
+  background: #fce8e6;
+}
+
+.branchProgress {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.branchProgressBarOuter {
+  width: 40px;
+  height: 4px;
+  background: #f3f4f6;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.branchProgressBarInner {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.branchProgressText {
+  font-size: 10px;
+  color: var(--color-text-hint);
+  font-weight: 600;
+  min-width: 28px;
+}
+
+/* Item list */
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-left: 14px;
+}
+
+.itemRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+.itemCheckbox {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemName {
+  font-size: 12px;
+  flex: 1;
+}
+
+.itemStatus {
+  display: none;
+}
+
+.emptyNote {
+  font-size: 11px;
+  color: var(--color-text-faint);
+  font-style: italic;
+  padding: 2px 0;
+}
+
+/* Recommendation */
+.recommendBlock {
+  margin-top: 4px;
+  padding: 6px 10px;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #92400E;
+  line-height: 1.5;
+}
+
+.recommendLabel {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+/* Cross platform section */
+.crossSection {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+
+.crossTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--color-text-primary);
+}
+
+.crossGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.crossCard {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.crossCardTitle {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.crossCardProvider {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.crossCardDesc {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Integration flow */
+.integrationFlow {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+
+.flowTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.flowSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flowStep {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--color-bg-secondary);
+}
+
+.flowStepNum {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flowStepContent {
+  flex: 1;
+}
+
+.flowStepTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.flowStepDesc {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.flowStepOwner {
+  font-size: 10px;
+  color: var(--color-text-hint);
+  background: var(--color-bg-tertiary);
+  padding: 1px 6px;
+  border-radius: 4px;
+  align-self: center;
+}
+
+/* Connection diagram */
+.connDiagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 0;
+  flex-wrap: wrap;
+}
+
+.connNode {
+  padding: 8px 16px;
+  border: 2px solid;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #fff;
+}
+
+.connArrow {
+  font-size: 18px;
+  color: var(--color-text-faint);
+}
