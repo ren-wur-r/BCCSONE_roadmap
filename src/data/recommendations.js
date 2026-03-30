@@ -3,21 +3,20 @@ export const BRANCH_RECOMMENDATIONS = {
   "b-vuln-left-2": "需先確認客戶需求再決定優先順序。Fortify 與 Checkmarx 為企業級首選，SonaQube(Open) 可作為入門方案。",
   "b-vuln-left-3": "需定義黑箱/白箱報告的標準匯入格式 (JSON/XML)，建立 Parser 解析引擎。",
   "b-vuln-left-4": "需建立統一資產清冊，作為三平台整合的基礎。建議對接 BCCS One 已完成的資產管理模組。",
-  "b-vuln-right-3": "對接 Wiwi 已完成的 Generative-Report-System，不需自建報告引擎。需建立弱點 DB 到報告系統的資料連線。",
-  "b-vuln-right-4": "弱點管理目前無風險評分模型。建議對接 BCCS One 的風險評鑑引擎，將弱點嚴重度轉換為風險評分。",
-  "b-vuln-right-5": "DB 欄位已就緒，僅需開發前端 UI。是掃描流程的核心下游功能，為最優先項目。",
+  "b-vuln-right-5": "對接 Wiwi 已完成的 Generative-Report-System，不需自建報告引擎。需建立弱點 DB 到報告系統的資料連線。",
+  "b-vuln-right-6": "弱點管理目前無風險評分模型。建議對接 BCCS One 的風險評鑑引擎，將弱點嚴重度轉換為風險評分。",
+  "b-vuln-right-7": "DB 欄位已就緒 (OwaspCategory/IsValid/TechNotes/FixStatus)，僅需開發前端 UI。是掃描流程的核心下游功能，為最優先項目。",
 
-  "b-soc-left-1": "目前僅透過 Swimlane webhook 間接整合。建議優先直接對接 SPLUNK (市佔最高)，再擴展其他 SIEM。",
+  "b-soc-left-1": "目前透過 Swimlane 作為 SOAR 整合平台，webhook 推送 alert 到 SOC Portal。SPLUNK/FortiSIEM/QRadar/Wazuh 均透過 Swimlane 對接，如需直接整合需額外開發 API Client。",
   "b-soc-left-2": "TeamT5 Threatsonar 已完成。評估 PA XDR 的 API 可用性，Wazuh EDR(Open) 可作為開源方案。",
-  "b-soc-left-3": "CTI 情資匯入可提升威脅偵測深度。建議優先整合 ThreatVision (台灣在地情資)。",
-  "b-soc-right-3": "報告系統已完成度最高。補充 Excel/Word 匯出格式，擴大報告適用場景。",
-  "b-soc-right-4": "SOC 目前無風險評分模型。建議對接 BCCS One 的風險評鑑引擎，將安全事件頻率/影響轉換為風險評分。",
+  "b-soc-left-3": "CTI 情資匯入可提升威脅偵測深度。目前完全無程式碼實作。",
+  "b-soc-right-4": "SOC 目前無風險評分模型，僅有基本 severity/priority 分級。建議對接 BCCS One 的風險評鑑引擎。",
 
   "b-bccs-left-1": "已完成。可作為三平台統一資產清冊的基礎，輸出為共用 API 服務。",
   "b-bccs-left-2": "核心已完成。建立弱點管理平台與 SOC 的資料匯入通道，自動填入威脅/弱點矩陣。",
   "b-bccs-right-3": "直接對接 Wiwi 的 Generative-Report-System，設計稽核/風險評估報告模版。",
   "b-bccs-right-4": "風險計算核心已完成。建立整合 DB (統一資產清冊 + 弱點/威脅對應表 + 安全事件摘要表)，接收另兩平台的資料。",
-  "b-bccs-right-5": "前端已完成 90%，後端 API + 資料庫為上線最大阻礙。建議先建立 MSSQL Schema，再逐步實作 .NET Core API。",
+  "b-bccs-right-6": "前端已完成 90%，後端 API + 資料庫為上線最大阻礙。建議先建立 MSSQL Schema，再逐步實作 .NET Core API。",
 };
 
 export const SHARED_MODULES = [
